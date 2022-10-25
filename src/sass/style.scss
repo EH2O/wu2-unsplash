@@ -1,0 +1,24 @@
+
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+}
+.grid{
+    background-color: rgb(197, 196, 255);
+    padding: 5rem;
+    grid-gap: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+}
+.grid :nth-child(even){
+ 
+}
+
+
+.test{
+    background-size: cover;
+}

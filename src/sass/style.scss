@@ -5,11 +5,13 @@ body{
     align-items: center;
     justify-content: center;
     margin: 0;
+    width: min(130ch, 100vw - 2rem);
+    margin-inline: auto;
 }
 .grid{
     background-color: rgb(197, 196, 255);
     padding: 5rem;
-    grid-gap: 10px;
+    grid-gap: 4rem;
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;

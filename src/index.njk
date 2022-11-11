@@ -3,16 +3,20 @@ layout: base.njk
 ---
 
 <main>
-    <h1>Data dump</h1>
-    <p>Min github user: {{ github.login }} och plats: {{ github.location }}.</p>
     <div class="grid">
 
-
-    {% asyncAll  item in unsplash.results %}
+        {% for item in land %}
+            {% image item.flags.png, "test" %}
+        <div>
+            <h1>Land: {{item.name.common}}</h1>
+            <h2>Official name: {{item.name.official}}</h2>
+            <h2>Captial: {{item.capital}}</h2>
+        </div>
+        {% else %}
         
-        {% image item.urls.small, item.alt_description %}
+        {% endfor %}
+ 
 
-    {% endall %}
     </div>
 
     <!-- {% image "https://images.unsplash.com/photo-1508361001413-7a9dca21d08a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNzQ3Nzh8MHwxfHNlYXJjaHwxfHxoYWxsb3dlZW58ZW58MHx8fHwxNjY2NTk0Mjc4&ixlib=rb-4.0.3&q=80&w=400", "photo of my cat" %} -->

@@ -7,18 +7,24 @@ body{
     margin: 0;
     width: min(130ch, 100vw - 2rem);
     margin-inline: auto;
+
+ 
 }
-.grid{
+main{
     background-color: rgb(197, 196, 255);
     padding: 5rem;
+}
+.grid{
+
     grid-gap: 4rem;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    align-items: center;
+
+    @media(max-width: 600px){
+        grid-template-columns: 1fr;
+      }
 }
-.grid :nth-child(even){
- 
-}
+
 
 
 .test{
